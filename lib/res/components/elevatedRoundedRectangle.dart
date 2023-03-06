@@ -4,7 +4,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
 class ElevatedRoundedRectangle extends StatelessWidget {
-  const ElevatedRoundedRectangle({super.key});
+  Widget child;
+   ElevatedRoundedRectangle({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +22,8 @@ class ElevatedRoundedRectangle extends StatelessWidget {
                 blurRadius: 8,
                 offset: Offset(2.0, 2.0))
           ]),
+
+          child: child,
     );
   }
 }

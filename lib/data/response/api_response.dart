@@ -1,21 +1,27 @@
-import './status.dart';
+
+import 'package:bookstore/data/response/status.dart';
+
 
 class ApiResponse<T> {
-  Status? status;
-  T? data;
-  String? message;
 
-  ApiResponse(this.status, this.data, this.message);
+  Status? status ;
+  T? data ;
+  String? message ;
 
-  //when loading data  from server
-  ApiResponse.loading() : status = Status.LOADING;
+  ApiResponse(this.status , this.data, this.message);
 
-  //when getting request successfully completed
-  ApiResponse.completed() : status = Status.COMPLETED;
 
-  //when getting error from server
-  ApiResponse.error() : status = Status.ERROR;
+  ApiResponse.loading() : status = Status.LOADING ;
+
+  ApiResponse.completed(this.data) : status = Status.COMPLETED ;
+
+  ApiResponse.error(this.message) : status = Status.ERROR ;
+
 
   @override
-  String toString() => "Status: $status \n Message:$message \n Data: $data";
+  String toString(){
+    return "Status : $status \n Message : $message \n Data: $data" ;
+  }
+
+
 }
