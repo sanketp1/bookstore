@@ -30,10 +30,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Text("Books"),
+        title: Text("BookStore"),
       ),
       body: ChangeNotifierProvider<HomeViewViewModel>(
         create: (BuildContext context) => homeViewViewModel,

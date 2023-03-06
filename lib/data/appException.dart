@@ -4,7 +4,7 @@ class AppException implements Exception {
 
   AppException([this._message, this._prefix]);
 
-  String toString() => "$_prefix $_message";
+  String toString() => "$_message";
 }
 
 class FetchDataException extends AppException {

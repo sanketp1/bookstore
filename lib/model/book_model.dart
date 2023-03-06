@@ -61,12 +61,12 @@ class PublishedDate {
   PublishedDate({this.date});
 
   PublishedDate.fromJson(Map<String, dynamic> json) {
-    date = json['$date'];
+    date = json['\$date'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['$date'] = this.date;
+    data['\$date'] = this.date;
     return data;
   }
 }

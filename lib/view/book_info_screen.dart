@@ -6,6 +6,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:intl/intl.dart';
 
 class BookInfoScreen extends StatelessWidget {
   BookModel? bookModel;
@@ -17,6 +18,13 @@ class BookInfoScreen extends StatelessWidget {
       items = "$item, " + items;
     }
     return items;
+  }
+
+  //method to format date
+  String formatDate(String formattedString) {
+    final date = DateTime.parse(formattedString);
+    final formatted = DateFormat("yyyy/MM/dd").format(date);
+    return formatted;
   }
 
   @override
@@ -73,7 +81,7 @@ class BookInfoScreen extends StatelessWidget {
             BookInformationBuilder(
                 tag: "Published Date",
                 data: bookModel!.publishedDate!.date != null
-                    ? bookModel!.publishedDate!.date.toString()
+                    ? formatDate(bookModel!.publishedDate!.date.toString())
                     : "Not available"),
             BookInformationBuilder(tag: "Status", data: bookModel!.status!),
             BookInformationBuilder(
