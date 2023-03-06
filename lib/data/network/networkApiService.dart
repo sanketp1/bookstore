@@ -11,6 +11,7 @@ class NetworkApiService extends BaseApiService {
     dynamic jsonResponse;
     try {
       final response = await http.get(Uri.parse(url));
+      jsonResponse = returnResponse(response);
     } on SocketException {
       throw FetchDataException("Not connected to internet");
     }
@@ -25,9 +26,8 @@ class NetworkApiService extends BaseApiService {
         return jsonResponse;
       case 400:
         throw BadRequestException("Invalid request");
-    default:
+      default:
         throw FetchDataException("An error occured during fetching data");
-
     }
   }
 }

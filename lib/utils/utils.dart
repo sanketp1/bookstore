@@ -4,6 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class Utils {
+  
+  static double getScreenWidth(BuildContext context) =>
+      MediaQuery.of(context).size.width;
+
+  static double getScreenHeight(BuildContext context) =>
+      MediaQuery.of(context).size.height;
+
+
+
   static double averageRating(List<int> rating) {
     var avgRating = 0;
     for (int i = 0; i < rating.length; i++) {
