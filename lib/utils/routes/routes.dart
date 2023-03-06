@@ -1,5 +1,6 @@
 import 'package:bookstore/utils/routes/route_names.dart';
 import 'package:bookstore/view/book_info_screen.dart';
+import 'package:bookstore/view/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../view/home_screen.dart';
@@ -7,6 +8,9 @@ import '../../view/home_screen.dart';
 class Routes {
   static MaterialPageRoute generateRoute(RouteSettings settings) {
     switch (settings.name) {
+      case RoutesName.splash:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => SplashScreen());
       case RoutesName.home:
         return MaterialPageRoute(
             builder: (BuildContext context) => HomeScreen());

@@ -1,5 +1,7 @@
+import 'package:bookstore/res/appTheme.dart';
 import 'package:bookstore/utils/routes/route_names.dart';
 import 'package:bookstore/utils/routes/routes.dart';
+import 'package:bookstore/view/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,11 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'BookStore',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-
-      initialRoute: RoutesName.home, 
+      theme: AppTheme.lightTheme,
+      // home: SplashScreen(),
+      initialRoute: RoutesName.splash, 
       onGenerateRoute: Routes.generateRoute,
      
      
