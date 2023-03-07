@@ -1,5 +1,4 @@
-# Sepia Pets App
-<img src="https://www.linkpicture.com/q/icon_52.png"  width="10%" height="10%">
+# BookStore App
 
 BookStore is an mobile application built with flutter and which is actually based on MVVM architecture
 
