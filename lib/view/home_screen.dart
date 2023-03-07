@@ -55,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: ElevatedRoundedRectangle(
                         child: Align(
                           alignment: Alignment.centerLeft,
-                          child: ListTile(
+                          child: ListTile(                
                             onTap: () {
                               Navigator.push(
                                   context,

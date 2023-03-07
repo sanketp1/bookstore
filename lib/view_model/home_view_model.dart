@@ -10,6 +10,10 @@ class HomeViewViewModel with ChangeNotifier {
 
   setBooksList(ApiResponse<List<BookModel>> response) {
     booksList = response;
+
+
+
+    
     notifyListeners();
   }
 

@@ -1,16 +1,61 @@
-# bookstore
+# Sepia Pets App
+<img src="https://www.linkpicture.com/q/icon_52.png"  width="10%" height="10%">
 
-A new Flutter project.
+BookStore is an mobile application built with flutter and which is actually based on MVVM architecture
 
-## Getting Started
+## installlation
+> 1. Download the APK file from this link: [Get App](https://drive.google.com/file/d/1DvpfI_xv_rPfBmyjtK7DWKcJUhGud4jz/view?usp=share_link)
 
-This project is a starting point for a Flutter application.
+> 2. Transfer the APK file to your Android device.
 
-A few resources to get you started if this is your first Flutter project:
+> 3. On your Android device, go to Settings > Security > Unknown sources and turn on the toggle to allow installations from unknown sources.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+> 4. Open the APK file from your device's file manager and follow the installation prompts.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Directory Structure
+
+    mypet/
+        |-- android
+        |-- ios
+        |-- assets/
+            |- book-icon.png
+        |-lib/
+            |--data/
+                |- network/
+                    |- baseApiService.dart
+                    |- networkApiService.dart
+                |- response/
+                    |- appException.dart
+            |- model
+                    |- book_model.dart
+                        
+            |- repository/
+                    |- home_repository.dart
+            |- res/
+                |- components
+                    |- bookInformationBuilder.dart
+                    |- elevatedRoundedRectangle.dart
+                |- appColor.dart
+                |- appFonts.dart
+                |- appTheme.dart
+                |- appUrl.dart
+            |- utils/
+                |- routes
+                    |- route_names.dart
+                    |- routes.dart
+                |- utils.dart
+            |- view
+                |- book_info_screen.dart
+                |- home_screen.dart
+                |- splash_screen.dart
+            |- view_model
+                |- home_view_model.dart
+            |- main.dart
+
+
+        
+                    
+                    
+
+
+
